@@ -1,12 +1,24 @@
-import { FETCH_EPISODES, FETCH_MOVIE } from "../actions";
+import { FETCH_EPISODES, FETCH_MOVIE, FETCH_EPISODE } from "../actions";
 
-export default (state = [], action = {}) => {
-  console.log("what is action", action);
+const initialState = {
+  episodes: [],
+  movie: {},
+  episode: {}
+};
+export default (state = initialState, action = {}) => {
   switch (action.type) {
     case FETCH_EPISODES:
-      return [...state, action.episodes];
+      return Object.assign({}, state, {
+        episodes: action.episodes
+      });
     case FETCH_MOVIE:
-      return [...state, action.movie];
+      return Object.assign({}, state, {
+        movie: action.movie
+      });
+    case FETCH_EPISODE:
+      return Object.assign({}, state, {
+        episode: action.episode
+      });
     default:
       return state;
   }
