@@ -38,6 +38,10 @@
     display: block;
     width: 100%;
   }
+  @include respond(small-phone) {
+    transform: translate(-50%, -15%);
+    height: 150rem;
+  }
 
   &__left {
     width: 40%;
@@ -89,7 +93,7 @@
     height: 40%;
   }
   @include respond(tab-port) {
-    height: 120%;
+    height: 110%;
     display: block;
     margin-left: auto;
     margin-right: auto;
