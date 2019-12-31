@@ -7,11 +7,11 @@ class MovieList extends Component {
     await this.props.fetchMovie(6771);
     await this.props.fetchEpisodes(6771);
   }
-
   render() {
     return (
       <div className="background">
-        {this.props.movie === undefined ? null : (
+        {!this.props.movie ||
+        Object.keys(this.props.movie).length === 0 ? null : (
           <div className="container">
             <div className="container__left">
               <img
@@ -78,10 +78,9 @@ class MovieList extends Component {
   }
 }
 const mapStateToProps = state => {
-  console.log("what is state", state);
   return {
-    movie: state[0],
-    episodes: state[1]
+    movie: state.movie,
+    episodes: state.episodes
   };
 };
 export default connect(mapStateToProps, { fetchMovie, fetchEpisodes })(
