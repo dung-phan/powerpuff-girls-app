@@ -41,7 +41,7 @@ class MovieList extends Component {
                         <h5>Airdate</h5>
                       </div>
                       <div className="col-1-of-4">
-                        <h5>Description</h5>
+                        <h5>Info</h5>
                       </div>
                       {this.props.episodes === undefined
                         ? null

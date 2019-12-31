@@ -8,6 +8,18 @@
 
 html {
   font-size: 62.5%;
+  @include respond(phone) {
+    font-size: 40%;
+  }
+  @include respond(tab-port) {
+    font-size: 60%;
+  }
+  @include respond(tab-land) {
+    font-size: 60%;
+  }
+  @include respond(big-desktop) {
+    font-size: 80%;
+  }
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -17,6 +29,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   color: white;
-  background: linear-gradient(to left, #fd929f, #bfe9ff);
-  background-size: cover;
 }
