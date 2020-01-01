@@ -10,9 +10,9 @@ class MovieDetails extends Component {
       <div className="episode-background">
         {this.props.episode === undefined ? null : (
           <div className="episode-container">
-            <div className="container__left">
+            <div className="episode-container__left">
               <img
-                className="poster"
+                className="episode-poster"
                 src={
                   this.props.episode.image ||
                   "https://static.tvmaze.com/images/no-img/no-img-landscape-text.png"
@@ -20,12 +20,12 @@ class MovieDetails extends Component {
                 alt="poster"
               />
             </div>
-            <div className="container__right">
-              <div className="container__right-heading">
+            <div className="episode-container__right">
+              <div className="episode-container__right-heading">
                 <h1>{this.props.episode.name}</h1>
               </div>
-              <div className="container__right-body">
-                <div className="container__right-body-summary">
+              <div className="episode-container__right-body">
+                <div className="episode-container__right-body-summary">
                   <h4>Summary: </h4>
                   <div
                     className="text-summary"
@@ -33,7 +33,7 @@ class MovieDetails extends Component {
                       __html: this.props.episode.summary
                     }}
                   />
-                  <div className="container__right-body-episodes">
+                  <div className="container__right-body-episode">
                     <h4>Episode Info:</h4>
                     <div className="text-summary">
                       <p>Season: {this.props.episode.season}</p>
