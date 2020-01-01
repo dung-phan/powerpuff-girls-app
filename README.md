@@ -1,4 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8a91c235-7004-403c-9efb-2a3bc9065c70/deploy-status)](https://app.netlify.com/sites/powerpuff-girls)
+
 # POWERPUFF GIRLS MOVIE APP
+
+## [ Check out the deployed version here! ](https://powerpuff-girls.netlify.com)
 
 ## What this project is about
 
@@ -20,7 +24,7 @@ Build a Single-Page-Application with two pages (routes): a details page for the 
 I used the following technologies: HTML, SASS, React, Redux and Enzyme.
 I used [create-react-app](https://goo.gl/26jfy4) to generate the scaffolding for this app.
 
-#### 👀👇 Click links to view some samples in this project 👇👀
+#### 👀 Click links to view some samples in this project 👇
 
 - **[react](./src/components/Movie.js)**
 - **[redux](./src/reducers/index.js)**
