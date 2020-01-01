@@ -33,7 +33,6 @@
     display: block;
     width: 100%;
   }
-
   &__left {
     width: 40%;
     display: table-cell;
@@ -84,7 +83,5 @@
   }
   @include respond(phone) {
     height: 40%;
-  }
-  @include respond(small-phone) {
   }
 }
