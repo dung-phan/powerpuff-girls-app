@@ -1,5 +1,5 @@
 .background {
-  background: linear-gradient(to left, #fd929f, #bfe9ff);
+  background: linear-gradient(to left, $gradient-1, $gradient-2);
   height: 110vh;
   @include respond(tab-land) {
     height: 160vh;
@@ -13,13 +13,13 @@
 }
 .container {
   @include absoluteCenter;
-  background: linear-gradient(to left, #fd929f, #bfe9ff);
+  background: linear-gradient(to left, $gradient-1, $gradient-2);
   opacity: 0.8;
   height: 65rem;
   margin-top: 3rem;
   border-radius: 20px;
   display: table;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2rem 4rem $primary-color-dark;
   width: 75%;
 
   @include respond(tab-land) {
@@ -107,5 +107,5 @@
   padding: 2rem 0;
 }
 .ep-render:hover {
-  color: rgba(58, 57, 58, 0.473);
+  color: $primary-color-dark;
 }

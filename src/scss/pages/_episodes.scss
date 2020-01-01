@@ -1,5 +1,5 @@
 .episode-background {
-  background: linear-gradient(to left, #fd929f, #bfe9ff);
+  background: linear-gradient(to left, $gradient-1, $gradient-2);
   height: 100vh;
   @include respond(tab-port) {
     height: 120vh;
@@ -13,12 +13,12 @@
 }
 .episode-container {
   @include absoluteCenter;
-  background: linear-gradient(to left, #fd929f, #bfe9ff);
+  background: linear-gradient(to left, $gradient-1, $gradient-2);
   opacity: 0.8;
   height: 40rem;
   border-radius: 20px;
   display: table;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2rem 4rem $primary-color-dark;
   width: 70%;
   @include respond(tab-port) {
     transform: translate(-50%, -35%);
