@@ -30,21 +30,7 @@ class Movie extends Component {
                       __html: this.props.movie.summary
                     }}
                   />
-                  <div className="container__right-body-episodes">
-                    <h4>Previous episodes</h4>
-                    <div className="row ep-list">
-                      <div className="col-2-of-4">
-                        <h5>Episode name</h5>
-                      </div>
-                      <div className="col-1-of-4">
-                        <h5>Airdate</h5>
-                      </div>
-                      <div className="col-1-of-4">
-                        <h5>Info</h5>
-                      </div>
-                      <MovieList />
-                    </div>
-                  </div>
+                  <MovieList />
                 </div>
               </div>
             </div>
