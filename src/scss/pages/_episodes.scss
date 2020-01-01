@@ -1,6 +1,15 @@
 .episode-background {
   background: linear-gradient(to left, #fd929f, #bfe9ff);
   height: 100vh;
+  @include respond(tab-port) {
+    height: 120vh;
+  }
+  @include respond(phone) {
+    height: 140vh;
+  }
+  @include respond(small-phone) {
+    height: 110vh;
+  }
 }
 .episode-container {
   @include absoluteCenter;
@@ -11,7 +20,71 @@
   display: table;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   width: 70%;
+  @include respond(tab-port) {
+    transform: translate(-50%, -35%);
+    height: 35rem;
+  }
+  @include respond(phone) {
+    transform: translate(-50%, -30%);
+  }
+  @include respond(small-phone) {
+    height: 50rem;
+    transform: translate(-50%, -45%);
+    display: block;
+    width: 100%;
+  }
+
+  &__left {
+    width: 40%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 2rem;
+    padding-left: 4rem;
+    @include respond(phone) {
+      display: block;
+      padding: 3rem 7rem;
+    }
+    @include respond(small-phone) {
+      display: block;
+      padding: 2rem 3.5rem;
+    }
+  }
+  &__right {
+    display: table-cell;
+    padding: 1rem 2rem;
+    @include respond(phone) {
+      display: block;
+    }
+    &-heading {
+      padding: 1rem 1rem;
+      text-align: center;
+    }
+    &-body-summary {
+      padding: 0 2rem;
+      line-height: 2.2rem;
+      @include respond(phone) {
+      }
+    }
+    &-body-episode {
+      padding: 2rem 0;
+    }
+  }
 }
+
 .text-summary {
   padding: 1rem 0;
+}
+.episode-poster {
+  height: 50%;
+  @include respond(tab-port) {
+    height: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include respond(phone) {
+    height: 40%;
+  }
+  @include respond(small-phone) {
+  }
 }
