@@ -6,7 +6,7 @@
 
 ## What this project is about
 
-Build a Single-Page-Application with two pages (routes): a details page for the TV show "Powerpuff Girls", and an episode detail page with information about specific episodes
+Build a Single-Page-Application with two pages (routes): a detail page for the TV show "Powerpuff Girls", and an episode detail page with information about specific episodes
 
 ## Instructions
 
@@ -29,11 +29,11 @@ I used [create-react-app](https://goo.gl/26jfy4) to generate the scaffolding for
 - **[react](./src/components/Movie.js)**
 - **[redux](./src/reducers/index.js)**
 - **[redux-thunk](./src/actions/index.js)**
-- **[SASS](./src/scss/pages/_movies.scss)**
+- **[SASS](./src/scss/pages/_movie.scss)**
 
 ## Features
 
-- Homepage shows the TV show 'Powerpuff Girls' with a movie poster, movie summary and a short list of latest episodes
+- A homepage shows the TV show 'Powerpuff Girls' with a movie poster, movie summary and a short list of latest episodes
 - A detailed page with information about each episode
 - The web application is also responsive with five breakpoints for phone (small and normal size), tablet (landscape and portrait) and desktop.
 
