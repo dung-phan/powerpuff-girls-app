@@ -6,7 +6,7 @@ import moxios from "moxios";
 
 beforeEach(() => {
   moxios.install();
-  moxios.stubRequest("http://api.tvmaze.com/shows/6771", {
+  moxios.stubRequest("https://api.tvmaze.com/shows/6771", {
     status: 200,
     response: { image: "", summary: "" }
   });
