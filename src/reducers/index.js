@@ -8,17 +8,11 @@ const initialState = {
 export default (state = initialState, action = {}) => {
   switch (action.type) {
     case FETCH_EPISODES:
-      return Object.assign({}, state, {
-        episodes: action.episodes
-      });
+      return { ...state, episodes: action.episodes };
     case FETCH_MOVIE:
-      return Object.assign({}, state, {
-        movie: action.movie
-      });
+      return { ...state, movie: action.movie };
     case FETCH_EPISODE:
-      return Object.assign({}, state, {
-        episode: action.episode
-      });
+      return { ...state, episode: action.episode };
     default:
       return state;
   }
