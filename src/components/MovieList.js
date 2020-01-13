@@ -21,6 +21,7 @@ class MovieList extends Component {
           <div className="col-1-of-4">
             <h5>Info</h5>
           </div>
+
           {this.props.episodes === undefined
             ? null
             : this.props.episodes.map(episode => {

@@ -1,5 +1,4 @@
 import axios from "axios";
-import _ from "lodash";
 export const FETCH_EPISODES = "FETCH_EPISODES";
 export const FETCH_MOVIE = "FETCH_MOVIE";
 export const FETCH_EPISODE = "FETCH_EPISODE";
@@ -17,8 +16,8 @@ export const fetchEpisode = id => async dispatch => {
 export const fetchEpisodes = id => async dispatch => {
   const response = await axios.get(`${baseURL}/shows/${id}/episodes`);
   //pick six latest episodes and sort them in a descending order
-  const latestEpisodes = _.takeRight(response.data, 6);
-  const sortEpisodes = _.orderBy(latestEpisodes, ["number"], ["desc"]);
+  const latestEpisodes = response.data.slice(-6);
+  const sortEpisodes = latestEpisodes.sort((a, b) => b.number - a.number);
   dispatch({
     type: FETCH_EPISODES,
     episodes: sortEpisodes
