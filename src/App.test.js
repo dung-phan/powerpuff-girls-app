@@ -1,18 +1,17 @@
 import React from "react";
 import { mount } from "enzyme";
 import { MemoryRouter } from "react-router";
-import { Provider } from "react-redux";
 import App from "./App";
 import Movie from "./components/Movie";
 import MovieDetails from "./components/MovieDetails";
-import store from "./store";
+import Root from "./root";
 
 const renderRoutes = path =>
   mount(
     <MemoryRouter initialEntries={[path]}>
-      <Provider store={store}>
+      <Root>
         <App />
-      </Provider>
+      </Root>
     </MemoryRouter>
   );
 describe("#routes", () => {
